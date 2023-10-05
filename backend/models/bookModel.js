@@ -17,8 +17,8 @@ const bookSchema = mongoose.Schema(
             required: true 
         }, 
         
-        yearReleased: {
-            type: String,
+        publishYear: {
+            type: Number,
             required: true 
         }, 
     },
@@ -27,4 +27,4 @@ const bookSchema = mongoose.Schema(
     }
 );
 
-export const Book = mongoose.model("The Book", bookSchema);
+export const Book = mongoose.model("Books", bookSchema);
