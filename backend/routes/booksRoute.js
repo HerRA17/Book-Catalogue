@@ -2,7 +2,7 @@ import express from "express";
 import { Book } from "../models/bookModel.js";
 const router = express.Router()
 
-// Route to Fave a new Book 
+// Route to Save a new Book 
 router.post("/", async (request, response) => {
     try {
         if (
