@@ -16,18 +16,19 @@ const Home = () => {
         .then((response) => {
             setBooks(response.data.data);
             setLoading(false);
+            console.log(response.data);
         })
         .catch((error) => {
             console.log(error);
             setLoading(false);
         })
     }, []);
-    
+        
     return (
     <div className="p-4 ">
         <div className="flex justify-between items-center">
             <h1 className="text-3xl my-8"> Books List</h1>
-            <Link to="/books/create">
+            <Link to="/Books/create">
                 <MdOutlineAddBox className="text-sky-800 text-4xl" />
             </Link>
         </div>
@@ -47,6 +48,7 @@ const Home = () => {
                 </thead>
                 <tbody>
                     {books.map((book, index) => {
+                        return (
                         <tr key={book._id} className="h-8">
                             <td className="border border-slate-700 rounded-md text-center">
                                 {index + 1}
@@ -65,18 +67,18 @@ const Home = () => {
                             </td>
                             <td className="border border-slate-700 rounded-md text-center">
                                 <div className="flex justify-center gap-x-4">
-                                    <Link to={`/books/details${books._id}`}>
+                                    <Link to={`/Books/details/${books._id}`}>
                                         <BsInfoCircle className="text-2xl text-green-800" />
                                     </Link>
-                                    <Link to={`/books/edit${books._id}`}>
+                                    <Link to={`/Books/edit/${books._id}`}>
                                         <AiOutlineEdit className="text-2xl text-yellow-600" />
                                     </Link>
-                                    <Link to={`/books/delete${books._id}`}>
+                                    <Link to={`/Books/delete/${books._id}`}>
                                         <MdOutlineDelete className="text-2xl text-red-600" />
                                     </Link>
                                 </div>
                             </td>
-                        </tr>
+                        </tr>)
                     })}
                 </tbody>
             </table>
