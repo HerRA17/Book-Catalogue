@@ -23,7 +23,7 @@ const Home = () => {
             setLoading(false);
         })
     }, []);
-        
+    
     return (
     <div className="p-4 ">
         <div className="flex justify-between items-center">
@@ -67,13 +67,13 @@ const Home = () => {
                             </td>
                             <td className="border border-slate-700 rounded-md text-center">
                                 <div className="flex justify-center gap-x-4">
-                                    <Link to={`/Books/details/${books._id}`}>
+                                    <Link to={`/Books/details/${book._id}`}>
                                         <BsInfoCircle className="text-2xl text-green-800" />
                                     </Link>
-                                    <Link to={`/Books/edit/${books._id}`}>
+                                    <Link to={`/Books/edit/${book._id}`}>
                                         <AiOutlineEdit className="text-2xl text-yellow-600" />
                                     </Link>
-                                    <Link to={`/Books/delete/${books._id}`}>
+                                    <Link to={`/Books/delete/${book._id}`}>
                                         <MdOutlineDelete className="text-2xl text-red-600" />
                                     </Link>
                                 </div>
