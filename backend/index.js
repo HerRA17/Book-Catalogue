@@ -14,7 +14,7 @@ const app = express();
 // app.use(cors());
 app.use(
     cors({
-        origin: ["http://localhost:5555", "http://127.0.0.1:5173/", "https://book-catalogue-backend-pi.vercel.app/"],
+        origin: ["http://localhost:5555", "http://127.0.0.1:5173/", "https://book-catalogue-backend-nu.vercel.app/"],
         methods: ["GET", "POST", "PUT", "DELETE"],
         allowedHeaders: ["Content Type"],
     })
