@@ -1,8 +1,9 @@
 {
-    "rewrites": [
-      {
-        "src": "/(.*)",
-        "destination": "/"
-      }
-    ]
-  }
+  "version": 2,
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "backend/index.js"
+    }
+  ]
+}
