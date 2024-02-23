@@ -1,15 +1,8 @@
 {
-    "version": 2,
-    "builds": [
-      {
-        "src": "backend/index.js",
-        "use": "@now/node"
-      }
-    ],
-    "routes": [
+    "rewrites": [
       {
         "src": "/(.*)",
-        "dest": "/"
+        "destination": "/"
       }
     ]
   }
